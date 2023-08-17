@@ -5,7 +5,9 @@ public class Excercise1{
 
         Scanner entry = new Scanner(System.in);
         int totalAcount = 0;
+        boolean close = false;
 
+        do {
         System.out.print("Hello!! Welcome to Sam's Restaurant :3" 
             + "\n Menu:"
             + "\n 1.Drinks" 
@@ -24,13 +26,14 @@ public class Excercise1{
 
             case 3: totalAcount += dessert();
             break;
-
-            default:
+            
+             default:
             System.out.println("wrong option");
+            close = true;
+             System.out.print("Total acount is: " + totalAcount);
         }
-
-        System.out.print("Total acount is: " + totalAcount);
-
+       
+        } while (!close);
     }
 
 
